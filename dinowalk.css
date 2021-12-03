@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width:100%;
+    height: 100vh;
+    position: relative;
+}
+.dino{
+    position: absolute;
+    background: url("Images/dino.png");
+    width:682px;
+    height:474px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation:dinoWalk 1s steps(10) infinite , dinoMove 4s linear infinite; 
+    /*
+    animation-name: dinoWalk;
+    animation-duration: 5s;
+    animation-timing-function: steps(8);
+    animation-iteration-count: infinite;
+    */
+    /*animation-name: dinoMove;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;*/
+}
+@keyframes dinoWalk{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 6820px;
+    }
+}
+@keyframes dinoMove{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
